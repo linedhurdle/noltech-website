@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * NolTech — main.js
+ * NolTech - main.js
  * Scroll reveal, counter animation, and mobile nav.
  * No eval(), no innerHTML, no inline event handlers.
  * Safe for GitHub Pages (static, no server-side).
@@ -75,7 +75,7 @@ qsa('a[href^="#"]').forEach(anchor => {
 
 /**
  * Fade + slide-up elements as they enter the viewport.
- * Uses IntersectionObserver — no layout thrash.
+ * Uses IntersectionObserver, no layout thrash.
  */
 const revealObserver = new IntersectionObserver(
   entries => {
@@ -94,8 +94,8 @@ qsa('.reveal').forEach(el => revealObserver.observe(el));
 // ─── Counter Animation ──────────────────────────────────────────────────────
 
 /**
- * Ease-out cubic — starts fast, decelerates to final value.
- * @param {number} t — progress 0–1
+ * Ease-out cubic: starts fast, decelerates to final value.
+ * @param {number} t - progress 0-1
  */
 function easeOutCubic(t) {
   return 1 - Math.pow(1 - t, 3);
@@ -115,7 +115,7 @@ function countUp(el) {
   function step(now) {
     const elapsed  = now - start;
     const progress = Math.min(elapsed / duration, 1);
-    // Use textContent — never innerHTML — to prevent XSS
+    // Use textContent, never innerHTML, to prevent XSS
     el.textContent = Math.round(easeOutCubic(progress) * target);
     if (progress < 1) requestAnimationFrame(step);
   }

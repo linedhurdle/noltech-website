@@ -1,5 +1,5 @@
 /* =============================================
-   NolTech — Landing Page Styles
+   NolTech - Landing Page Styles
    Bright, minimalist. No purple gradients,
    no centered slop, no Inter font.
    ============================================= */
@@ -28,7 +28,7 @@
   --ease:        cubic-bezier(0.16, 1, 0.3, 1);
   --dur:         0.3s;
 
-  /* System font stack — no Inter, no AI-default fonts */
+  /* System font stack - no Inter, no AI-default fonts */
   --font: system-ui, -apple-system, BlinkMacSystemFont,
           'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 
@@ -170,7 +170,7 @@ button   { cursor: pointer; border: none; background: none; font: inherit; }
   overflow: hidden;
 }
 
-/* Dot-grid background — subtle, not purple */
+/* Dot-grid background - subtle, not purple */
 .hero::before {
   content: '';
   position: absolute;
@@ -885,7 +885,7 @@ button   { cursor: pointer; border: none; background: none; font: inherit; }
   transform: none;
 }
 
-/* Staggered delays — siblings in the same grid */
+/* Staggered delays - siblings in the same grid */
 .hero-content .reveal:nth-child(2) { transition-delay: 0.06s; }
 .hero-content .reveal:nth-child(3) { transition-delay: 0.12s; }
 .hero-content .reveal:nth-child(4) { transition-delay: 0.18s; }
