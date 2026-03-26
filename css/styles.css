@@ -701,7 +701,63 @@ button   { cursor: pointer; border: none; background: none; font: inherit; }
   line-height: 1.65;
 }
 
-/* 11. eBay CTA
+/* 11. FAQ
+   ============================================= */
+.faq {
+  padding: 96px 0;
+  background: var(--bg-alt);
+}
+
+.faq-list {
+  max-width: 720px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+.faq-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-align: left;
+  transition: color var(--dur);
+}
+.faq-question:hover { color: var(--blue); }
+.faq-question[aria-expanded="true"] { color: var(--blue); }
+
+.faq-icon {
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--blue);
+  transition: transform var(--dur);
+  line-height: 1;
+}
+.faq-question[aria-expanded="true"] .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding-bottom: 22px;
+}
+.faq-answer p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* 12. eBay CTA
+   ============================================= */
    ============================================= */
 .cta-section {
   padding: 96px 0;

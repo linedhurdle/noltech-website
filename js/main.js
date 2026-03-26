@@ -162,3 +162,25 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach(sec => sectionObserver.observe(sec));
+
+// ─── FAQ Accordion ───────────────────────────────────────────────────────────
+
+qsa('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const answer   = btn.nextElementSibling;
+    const isOpen   = btn.getAttribute('aria-expanded') === 'true';
+
+    // Close all others
+    qsa('.faq-question').forEach(other => {
+      other.setAttribute('aria-expanded', 'false');
+      const otherAnswer = other.nextElementSibling;
+      if (otherAnswer) otherAnswer.hidden = true;
+    });
+
+    // Toggle clicked
+    if (!isOpen) {
+      btn.setAttribute('aria-expanded', 'true');
+      answer.hidden = false;
+    }
+  });
+});
