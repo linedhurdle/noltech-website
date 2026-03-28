@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0057FF"/>
+
+  <!-- Dot grid pattern -->
+  <defs>
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1.5" fill="rgba(255,255,255,0.12)"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Right accent block -->
+  <rect x="900" y="0" width="300" height="630" fill="rgba(0,0,0,0.12)"/>
+
+  <!-- Top accent line -->
+  <rect x="80" y="80" width="60" height="6" rx="3" fill="rgba(255,255,255,0.5)"/>
+
+  <!-- NolTech wordmark -->
+  <text
+    x="80"
+    y="290"
+    font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    font-size="130"
+    font-weight="900"
+    letter-spacing="-5"
+    fill="#FFFFFF">NolTech</text>
+
+  <!-- Tagline -->
+  <text
+    x="80"
+    y="370"
+    font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    font-size="36"
+    font-weight="400"
+    letter-spacing="0"
+    fill="rgba(255,255,255,0.75)">Refurbished Laptops &amp; Motherboards</text>
+
+  <!-- Bottom detail -->
+  <text
+    x="80"
+    y="530"
+    font-family="system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
+    font-size="24"
+    font-weight="600"
+    letter-spacing="2"
+    fill="rgba(255,255,255,0.45)">NOLTECH.ORG</text>
+
+  <!-- Decorative laptop shape (right side) -->
+  <rect x="960" y="160" width="180" height="120" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+  <rect x="972" y="170" width="156" height="100" rx="4" fill="rgba(255,255,255,0.06)"/>
+  <rect x="945" y="280" width="210" height="10" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <rect x="930" y="290" width="240" height="6" rx="3" fill="rgba(255,255,255,0.08)"/>
+
+  <!-- Screen lines -->
+  <rect x="984" y="185" width="100" height="7" rx="3" fill="rgba(255,255,255,0.35)"/>
+  <rect x="984" y="200" width="70" height="7" rx="3" fill="rgba(255,255,255,0.2)"/>
+  <rect x="984" y="215" width="85" height="7" rx="3" fill="rgba(255,255,255,0.2)"/>
+</svg>
