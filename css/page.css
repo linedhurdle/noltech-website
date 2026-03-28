@@ -1,0 +1,185 @@
+/* =============================================
+   NolTech - Product Page Styles (page.css)
+   Shared styles for laptops.html and motherboards.html
+   ============================================= */
+
+/* Page Hero */
+.page-hero {
+  padding: 140px 0 72px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(0, 87, 255, 0.07) 1px,
+    transparent 0
+  );
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+.page-hero .container { position: relative; z-index: 1; }
+
+.page-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: var(--navy);
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.page-hero p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 540px;
+  margin-bottom: 36px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+.breadcrumb a {
+  color: var(--blue);
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.breadcrumb a:hover { opacity: 0.75; }
+.breadcrumb span[aria-current] { color: var(--muted); }
+
+/* Page Content */
+.page-content {
+  padding: 80px 0 96px;
+}
+
+/* Info Grid */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.info-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.info-card h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+.info-card p:last-child { margin-bottom: 0; }
+
+/* Check list */
+.check-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.check-list li {
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 8px 0 8px 28px;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.5;
+}
+.check-list li:last-child { border-bottom: none; }
+.check-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: var(--blue-lt);
+  border-radius: 50%;
+  border: 2px solid var(--blue);
+}
+.check-list li::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 5px;
+  height: 9px;
+  border-right: 2px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
+  margin-top: -1px;
+}
+
+/* FAQ block on product pages */
+.faq-block {
+  margin-bottom: 64px;
+}
+.faq-block h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--navy);
+  margin-bottom: 32px;
+}
+
+/* CTA bar */
+.cta-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: var(--navy);
+  border-radius: 16px;
+  padding: 40px 48px;
+  flex-wrap: wrap;
+}
+
+.cta-bar h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.cta-bar p {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+  .info-grid { grid-template-columns: 1fr; }
+  .info-card { padding: 28px; }
+  .cta-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px;
+  }
+  .page-hero { padding: 120px 0 56px; }
+}
