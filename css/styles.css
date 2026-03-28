@@ -758,7 +758,6 @@ button   { cursor: pointer; border: none; background: none; font: inherit; }
 
 /* 12. eBay CTA
    ============================================= */
-   ============================================= */
 .cta-section {
   padding: 96px 0;
   background: var(--blue);
@@ -938,18 +937,21 @@ button   { cursor: pointer; border: none; background: none; font: inherit; }
   .nav-links {
     display: none;
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background: var(--white);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 36px;
-    z-index: 199;
+    z-index: 300;
   }
   .nav-links.open { display: flex; }
   .nav-links a { font-size: 1.4rem; color: var(--navy); }
 
-  .menu-toggle { display: flex; }
+  .menu-toggle { display: flex; z-index: 301; }
 }
 
 @media (max-width: 600px) {
